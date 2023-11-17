@@ -1,5 +1,20 @@
+.card{
+    width: 290px;
+    height: 350px;
+    border-radius: 20px;
+    background-color: aqua;
+    border-width: 2px;
+    display: flex;
+    flex-direction: column;
+}
 
+.cardImage{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
 
-.body{
-    border-style: solid;
+.dishName{
+    font-size: 30px;
+    padding-left: 180px;
 }

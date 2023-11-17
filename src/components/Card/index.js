@@ -1,17 +1,15 @@
-import './card.css'
+import './card.css';
 
 export default function Card(){
     return(
-        <div className='body'>
-            <div>
-                <h1>bread</h1>
-                <p>descriptionnnnnn</p> 
-           </div>
-
-           <div>
-                <h2>$40</h2>
-           </div>
-
+        <div className='card'>
+          <div className='cardImage'>
+            <img 
+              src=""
+              width={210}
+              height={230}/>
+          </div>
+          <p className='dishName'>text</p>
         </div>
     )
 }
