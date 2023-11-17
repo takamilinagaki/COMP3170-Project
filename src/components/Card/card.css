@@ -2,10 +2,12 @@
     width: 290px;
     height: 350px;
     border-radius: 20px;
-    background-color: aqua;
+    background-color: gray;
     border-width: 2px;
     display: flex;
     flex-direction: column;
+    font-family: 'Cabin', sans-serif;
+
 }
 
 .cardImage{

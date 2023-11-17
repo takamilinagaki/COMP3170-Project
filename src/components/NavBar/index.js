@@ -4,7 +4,7 @@ export default function TopBar(){
     return(
         <div className="topBarBody">
             <div>
-                <p className="logo">Cookie</p>
+                <p className="logo">Cookiy</p>
             </div>
             <div>
                 <a href="#Favoruite">Home</a>
