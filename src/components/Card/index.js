@@ -9,7 +9,7 @@ export default function Card(){
               width={210}
               height={230}/>
           </div>
-          <p className='dishName'>text</p>
+          <p className='dishName'>Recipe</p>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import './style.css';
 
-export default function TopBar(){
+export default function TopBar(navigation){
     return(
         <div className="topBarBody">
             <div>
@@ -8,7 +8,7 @@ export default function TopBar(){
             </div>
             <div>
                 <a href="#Favoruite">Home</a>
-                <a href="">Favourite</a>
+                <a href="" onClick={() => navigation.navigate('Favourite')}>Favourite</a>
             </div>
         </div>
     )

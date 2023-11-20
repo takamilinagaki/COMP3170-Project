@@ -3,15 +3,15 @@ import TopBar from './components/NavBar';
 import Card from './components/Card';
 import ButtonBar from './components/ButtonBar'
 
-export default function App() {
+export default function Favoruite() {
   return (
-    <div className="App">
+    <div className="Favourite">
 
       <div className="homePageTopSection">
         <div className="navBar">
          <TopBar />
         </div>
-         <h1>Find Your Favourite Recipe</h1>
+         <h1>Find Your Favoruite Recipe</h1>
       </div>
 
 <div className="bottomSection"> 

@@ -11,7 +11,7 @@ export default function ButtonBar(){
             textAlign: 'center',
             alignSelf: 'center'
         }}>
-          <p>Created By Jerry, Kyle, Takami😆</p>
+          <p style={{fontSize: 26}}>Created By Jerry, Kyle, Takami😆</p>
         </div>
         </>
     )
