@@ -1,0 +1,130 @@
+body {
+    background-color: #F5F3F0;
+  }
+  .App {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 30px;
+    margin: 0px 100px;
+  }
+  
+  .homePageTopSection{
+    height: 480px;
+    background-color: #FEBD2D;
+    border-radius: 30px;
+    font-family: 'Cabin', sans-serif;
+    margin: 0px 100px;
+  }
+  
+  .navBar{
+    padding: 0 30px;
+  }
+  
+  h1{
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'Cagliostro', sans-serif;
+  }
+  
+  
+  button{
+    width: 180px;
+    height: 60px;
+    border-radius: 40px;
+    border-width: 1px;
+    background-color: #F5F3F0;
+    font-size: 26px;
+    font-family: 'Cabin', sans-serif;
+  }
+  
+  button:hover{
+    background-color: #FEBD2D;
+  }
+  
+  .filterButtons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .searchings{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;  
+  }
+  
+  .searchResults{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .cards{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px
+  }
+  
+  .searchInput{
+    width: 670px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 30px;
+    border-width: 1px;
+    background-color: #F5F3F0;
+    font-family: 'Cabin', sans-serif;
+  }
+  
+  .sort{
+    width: 210px;
+    height: 60px;
+    border-radius: 30px;
+    font-size: 30px;
+    border-width: 1px;
+    background-color: #F5F3F0;
+    font-family: 'Cabin', sans-serif;
+  }
+  
+  .filterFont{
+    font-size: 40px;
+    padding-right: 80px;
+    font-family: 'Cagliostro', sans-serif;
+  }
+  
+  .bottomSection{
+    padding: 50px 50px;
+  }
+  
+  .searchResults{
+    padding: 0px 30px;
+    justify-content: space-between;
+  }
+  
+  @media (max-width: 1439px) {
+    .App {
+      width: 700px;
+    }
+  }
+  
+  @media (max-width: 2560px) {
+    .App {
+      display: flex;
+      flex-direction: column;
+      padding: 40px 30px;
+      background-color: #F5F3F0;
+      margin: 0px 100px;
+    }
+    .homePageTopSection{
+      background-color: #FEBD2D;
+      border-radius: 30px;
+      font-family: 'Cabin', sans-serif;
+      margin: 0;
+    }
+    .searchResults {
+      padding: 0px 30px;
+      padding-left: 100px;
+      gap: 60px;
+  }
+  }
