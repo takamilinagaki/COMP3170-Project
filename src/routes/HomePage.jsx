@@ -1,7 +1,24 @@
 import { Link } from "react-router-dom";
 import "./HomePage.css"
+import { useEffect, useState } from "react";
 
 export default function HomePage() {
+
+  const [recipes, setRecipes] = useState([]);
+
+
+  useEffect (() => {
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
+
+    async function getRecipes(){
+      const res = await fetch(url);
+      const data = await res.json();
+      setRecipes(data.meals);
+    }
+    getRecipes();
+  },[]);
+
+
   return (
     <div className="App">
 
@@ -23,10 +40,21 @@ export default function HomePage() {
 <div className="bottomSection"> 
    <div className="searchings">
           <p className="filterFont">Filter</p>
-          <input 
-           className="searchInput"
-           type="text"
-           placeholder='  Search up Recipes...'/>
+
+            <div className="searchBar">     
+
+              <input
+              className="searchInput"
+              type="text"
+              placeholder='Search up Recipes...'/>
+
+              <button 
+              type="submit"
+              className="searchGo">GO</button>
+
+            </div>
+
+
            
            <input 
            className="sort"
@@ -43,60 +71,22 @@ export default function HomePage() {
          </div>
 
          <div className="cards">
-         <div className='card'>
-          <div className='cardImage'>
-            <img 
-              src=""
-              width={210}
-              height={230}/>
+    
+
+        {recipes.map((recipe) => (
+          <div className = "card" key={recipe.idMeal}>
+            <div className="cardImage">
+              <img 
+                src={recipe.strMealThumb}
+                alt={recipe.strMeal}
+                width = {210}
+                height = {230}
+              />
+              </div>
+              <p className="dishName">{recipe.strMeal}</p>
           </div>
-          <p className='dishName'>Recipe</p>
-        </div>
-        <div className='card'>
-          <div className='cardImage'>
-            <img 
-              src=""
-              width={210}
-              height={230}/>
-          </div>
-          <p className='dishName'>Recipe</p>
-        </div>
-        <div className='card'>
-          <div className='cardImage'>
-            <img 
-              src=""
-              width={210}
-              height={230}/>
-          </div>
-          <p className='dishName'>Recipe</p>
-        </div>
-        <div className='card'>
-          <div className='cardImage'>
-            <img 
-              src=""
-              width={210}
-              height={230}/>
-          </div>
-          <p className='dishName'>Recipe</p>
-        </div>
-        <div className='card'>
-          <div className='cardImage'>
-            <img 
-              src=""
-              width={210}
-              height={230}/>
-          </div>
-          <p className='dishName'>Recipe</p>
-        </div>
-        <div className='card'>
-          <div className='cardImage'>
-            <img 
-              src=""
-              width={210}
-              height={230}/>
-          </div>
-          <p className='dishName'>Recipe</p>
-        </div>
+        ))}
+      
          </div>
     </div>
 </div>

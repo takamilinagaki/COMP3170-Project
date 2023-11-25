@@ -31,6 +31,7 @@ export default function Favourite() {
           <div className='cardImage'>
             <img 
               src=""
+              alt=""
               width={210}
               height={230}/>
           </div>
@@ -40,6 +41,7 @@ export default function Favourite() {
           <div className='cardImage'>
             <img 
               src=""
+              alt=""
               width={210}
               height={230}/>
           </div>
@@ -49,6 +51,7 @@ export default function Favourite() {
           <div className='cardImage'>
             <img 
               src=""
+              alt=""
               width={210}
               height={230}/>
           </div>
@@ -58,6 +61,7 @@ export default function Favourite() {
           <div className='cardImage'>
             <img 
               src=""
+              alt=""
               width={210}
               height={230}/>
           </div>
@@ -67,6 +71,7 @@ export default function Favourite() {
           <div className='cardImage'>
             <img 
               src=""
+              alt=""
               width={210}
               height={230}/>
           </div>
@@ -76,6 +81,7 @@ export default function Favourite() {
           <div className='cardImage'>
             <img 
               src=""
+              alt=""
               width={210}
               height={230}/>
           </div>
