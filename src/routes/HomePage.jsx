@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
 import "./HomePage.css"
 import { useEffect, useState } from "react";
+import { useRef } from "react";
 
 export default function HomePage() {
 
   const [recipes, setRecipes] = useState([]);
+  const [query, setQuery] = useState("")
+  const inputRef = useRef();
+
 
 
   useEffect (() => {
-    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
 
     async function getRecipes(){
       const res = await fetch(url);
@@ -16,7 +20,11 @@ export default function HomePage() {
       setRecipes(data.meals);
     }
     getRecipes();
-  },[]);
+  },[query]);
+
+  function handleSearch(){
+    setQuery(inputRef.current.value);
+  }
 
 
   return (
@@ -44,11 +52,13 @@ export default function HomePage() {
             <div className="searchBar">     
 
               <input
+              ref = {inputRef}
               className="searchInput"
               type="text"
               placeholder='Search up Recipes...'/>
 
               <button 
+              onClick = {handleSearch}
               type="submit"
               className="searchGo">GO</button>
 
