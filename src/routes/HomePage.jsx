@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./HomePage.css"
 import { useEffect, useState } from "react";
 import { useRef } from "react";
+import { Button } from "@fluentui/react";
 
 export default function HomePage() {
 
@@ -93,7 +94,12 @@ export default function HomePage() {
                 height = {230}
               />
               </div>
-              <p className="dishName">{recipe.strMeal}</p>
+              
+              <div className="infoStyles">
+                <button className="editButton" type="Submit">Edit</button>
+                <button className="editButton" type="Submit">♡</button>
+                <p className="dishName">{recipe.strMeal}</p>
+              </div>
           </div>
         ))}
       
